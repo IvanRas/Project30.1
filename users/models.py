@@ -12,3 +12,10 @@ class User(AbstractUser):
     phone_number = models.CharField(max_length=15, verbose_name='Номер телефона', help_text='Введите номер телефона', blank=True, null=True)
     city = models.CharField(max_length=40, verbose_name="Город", blank=True, null=True,
                                help_text="Введите город проживания")
+
+    def __str__(self):
+        return f'{self.email}'
+
+    class Meta:
+        verbose_name = 'пользователь'
+        verbose_name_plural = "Пользователи"
