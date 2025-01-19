@@ -1,11 +1,11 @@
-from rest_framework import generics, filters
-from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import filters, generics
 
+from django_filters.rest_framework import DjangoFilterBackend
 from users.models import Payment
 from users.serliazers import PaymentSerializer
 
-
 # Create your views here.
+
 
 class PaymentList(generics.ListAPIView):
     queryset = Payment.objects.all()
